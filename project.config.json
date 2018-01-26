@@ -39,6 +39,18 @@
 					"name": "personal",
 					"pathName": "pages/personal/personal",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "video",
+					"pathName": "pages/video/video",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": ""
 				}
 			]
 		}

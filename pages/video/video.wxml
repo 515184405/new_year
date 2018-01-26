@@ -1,0 +1,16 @@
+
+<view class='video-box'>
+  <view class='video-module'>
+    <video style='height:100%;width:100%' autoplay controls='{{video_module.controls}}' id='myVideo' poster='{{video_module.video_img}}' src="{{video_module.video_url}}" ></video>
+  </view>
+  <view class='text-module'>
+    <swiper class='text-swiper'                            
+    autoplay="{{scroll_data.autoplay}}" interval="{{scroll_data.interval}}" duration="{{scroll_data.duration}}" circular="{{scroll_data.circular}}"  vertical="{{scroll_data.vertical}}">
+    <block wx:for="{{str}}">
+      <swiper-item class='flex'>
+         <navigator class='btn btn-link1' url="../user/user?id=1" hover-class="navigator-hover" open-type="redirect">{{item}}</navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+</view>

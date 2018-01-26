@@ -3,7 +3,7 @@
      <image wx:if='{{camera_show == 0}}' src='../../image/video-img.jpg' mode='widthFix' style='width:100%'></image>
        <camera wx:if='{{camera_show == 1}}' device-position="front" flash="off" binderror="error" style="width: 100%; height: 100%;"></camera>      
      <cover-view wx:if='{{is_flicker == 1}}' class='camera-rec'> ● REC </cover-view>
-     <video style='height:100%;width:100%' autoplay controls='false' id='myVideo' wx:if='{{camera_show == 2}}' poster='{{video_img}}' src="{{video_url}}"   controls ></video>
+     <video style='height:100%;width:100%' autoplay controls='{{false}}' id='myVideo' wx:if='{{camera_show == 2}}' poster='{{video_img}}' src="{{video_url}}" ></video>
   </view>
   <view class='btn-module flex'>
       <button wx:if='{{action == 1}}' bindtap='startRecord' class='btn btn-link1'>开始录制</button> 
@@ -16,7 +16,8 @@
       </block>
   </view>
    <view class='text-module'>
-      <text>数据和郭</text> 
+
+       <navigator class='btn btn-link1' url="../video/video?id=1" hover-class="navigator-hover" open-type="redirect">跳转video</navigator>
       <text>数据和郭</text> 
       <text>数据和郭</text> 
       <text>数据和郭</text> 

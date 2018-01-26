@@ -1,0 +1,23 @@
+.video-module{
+  height:60%;
+  overflow: hidden;
+  position: relative;
+}
+.video-box{
+  height:100%;
+   background-color:#e01e1e;
+}
+.text-module{
+  height:40%;
+  color:#ffde03;
+  text-align: center;
+  overflow:hidden;
+}
+.text-swiper{
+  height:100%;
+}
+.text-module text{
+  display: block;
+  font-size: 36rpx;
+  line-height: 60rpx;
+}

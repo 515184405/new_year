@@ -1,0 +1,14 @@
+<view class='user'>
+   <view class='userInfo_module flex'>
+     <image src='{{userInfo.avatarUrl}}' class='avatarUrl'></image> 
+     <view class='nickName'>{{userInfo.nickName}}</view>
+   </view>
+   <scroll-view scroll-with-animation="{{true}}" scroll-y="{{true}}" class='pay-module'>
+      <view wx:for='{{list}}' class='flex item-box'>
+          <image src='{{item.imgUrl}}' class='item-img'></image>
+        <button class='btn-status' wx:if='{{item.btn_status == 0}}'>已使用</button>
+        <button style='color:#f00' class='btn-status' wx:if='{{item.btn_status == 1}}'>未使用</button>
+        <button style='color:#40ea4d' class='btn-status' wx:if='{{item.btn_status == 2}}'>未支付</button>
+      </view>
+   </scroll-view>
+</view>
