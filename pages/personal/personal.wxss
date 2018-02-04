@@ -1,5 +1,5 @@
 .video-box{
-  height:60%;
+  height:45%;
   overflow: hidden;
   position: relative;
 }
@@ -14,20 +14,19 @@
   width:100%;
   background-color:#e01e1e;
 }
-.btn-module{
-  display: flex;
-  height:15%;
-  border-top:1px solid #e75050;
-  border-bottom:1px solid #e75050;
-  box-sizing: border-box;
-}
-.btn{
-  margin-bottom:0;
-}
 .text-module{
-  height:25%;
+  height:55%;
+}
+.text-swiper{
+  height:100%;
+}
+.btn-module{
+  position: relative;
+  z-index:999;
+  margin-top:-110rpx;
 }
 .btn-module button{
   background-color:transparent;
   line-height: 1;
+  justify-content: space-between;
 }

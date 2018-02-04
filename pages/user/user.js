@@ -11,17 +11,16 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    list:[ //0为已使用 1为未使用 2为未支付
-      { imgUrl: 'http://placehold.it/150x150', btn_status: 0 },
-      { imgUrl: 'http://placehold.it/150x150', btn_status: 1 },
-      { imgUrl: 'http://placehold.it/150x150', btn_status: 1 },
-      { imgUrl: 'http://placehold.it/150x150', btn_status: 2 },
-      { imgUrl: 'http://placehold.it/150x150', btn_status: 2 },
-      { imgUrl: 'http://placehold.it/150x150', btn_status: 2 },
-      { imgUrl: 'http://placehold.it/150x150', btn_status: 2 },
-    ]
+    list:[
+    ],
+    active:1,
   },
-
+  toggleClass:function(e){
+    this.setData({
+      'active':e.currentTarget.dataset.cls,
+    })
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */

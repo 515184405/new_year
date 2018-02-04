@@ -1,6 +1,5 @@
 <view class='personal-box'>
   <view class='video-box flex'>
-     <image wx:if='{{camera_show == 0}}' src='../../image/video-img.jpg' mode='widthFix' style='width:100%'></image>
        <camera wx:if='{{camera_show == 1}}' device-position="front" flash="off" binderror="error" style="width: 100%; height: 100%;"></camera>      
      <cover-view wx:if='{{is_flicker == 1}}' class='camera-rec'> ● REC </cover-view>
      <video style='height:100%;width:100%' autoplay controls='{{false}}' id='myVideo' wx:if='{{camera_show == 2}}' poster='{{video_img}}' src="{{video_url}}" ></video>
@@ -9,22 +8,20 @@
       <button wx:if='{{action == 1}}' bindtap='startRecord' class='btn btn-link1'>开始录制</button> 
       <button wx:if='{{action == 2}}' bindtap='stopRecord' class='btn btn-link1'>结束录制</button> 
       <block wx:if='{{action == 3}}'>
-        <button bindtap='startRecord' class='btn btn-link1'>重录</button> 
-        <button bindtap='plays' style='margin-left:30rpx;' class='btn btn-link1'>播放</button>   
-        <button bindtap='pauses' style='margin-left:30rpx;' class='btn btn-link1'>暂停</button>          
-        <button open-type="share" style='margin-left:30rpx;' class='btn btn-link1'>分享</button>         
+        <button bindtap='startRecord' class='btn btn-link1'>重新录制</button> 
+        <button bindtap='plays' style='margin-left:30rpx;' class='btn btn-link1'>预览</button>        
+        <button open-type="share" style='margin-left:30rpx;' class='btn btn-link1'>下一步</button>         
       </block>
+       <button wx:if='{{action == 4}}' bindtap='returnFun' class='btn btn-link1'>返回</button>     
   </view>
-   <view class='text-module'>
-
-       <navigator class='btn btn-link1' url="../video/video?id=1" hover-class="navigator-hover" open-type="redirect">跳转video</navigator>
-      <text>数据和郭</text> 
-      <text>数据和郭</text> 
-      <text>数据和郭</text> 
-      <text>数据和郭</text> 
-      <text>数据和郭</text> 
-      <text>数据和郭</text> 
-      <text>数据和郭</text> 
-      <text>数据和郭</text> 
-  </view>
+    <view class='text-module'>
+    <swiper class='text-swiper'                            
+    autoplay="{{scroll_data.autoplay}}" interval="{{scroll_data.interval}}" duration="{{scroll_data.duration}}" circular="{{scroll_data.circular}}"  vertical="{{scroll_data.vertical}}">
+    <block wx:for="{{str}}">
+      <swiper-item class='flex'>
+         <navigator class='btn btn-link1' url="../user/user?id=1" hover-class="navigator-hover" open-type="redirect">{{item}}</navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
 </view>

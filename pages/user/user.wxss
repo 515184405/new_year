@@ -4,24 +4,52 @@
   background-color:#eee;
 }
 .userInfo_module{
-  height:25%;
+  height:18%;
+  background: #fff;
   flex-direction: column;
 }
 .avatarUrl{
   display: block;
-  height:120rpx;
-  width:120rpx;
-  border-radius: 50%;
+  height:100rpx;
+  width:100rpx;
+  border-radius: 5px;
   overflow:hidden;
 }
 .nickName{
   font-size: 32rpx;
   margin-top:18rpx;
-  color:#777;
+  color:#333;
+}
+.user_module{
+  height:80%;
+  margin-top:2%;
+  background: #fff;
+}
+.navBar{
+  height:5%;
+  padding:20rpx 5%;
+}
+.navBar-box{
+  width:100%;
+  border:1px solid #aaa;
+  border-radius: 3px;
+}
+.navBar-box .active{
+  background-color:yellowgreen;
+}
+.navBar-item{
+  width:50%;
+  text-align: center;
+  padding:10rpx 0;
+  font-size:32rpx;
+}
+.navBar-item:last-child{
+  border-left:1px solid #aaa;
 }
 .pay-module{
   width:100%;
   height:75%;
+  background: #fff;
   box-sizing: border-box;
 }
 .item-img{

@@ -8,8 +8,16 @@ Page({
     action : 1, //按钮状态
     is_flicker : false, //是否显示录制icon
     timer : null, //定时器开关
-    camera_show : 0, //是否开始录像
+    camera_show : 1, //是否开始录像
     uid : null,
+    str: ['就告诉老公那边', '送二更不能换地方公司', '代理发布到两点半那地', '方了办公机构的副本呢'],
+    scroll_data: { //文字滚动设置
+      autoplay: true,
+      interval: 3000,
+      duration: 1000,
+      vertical: true,
+      circular: true,
+    }
   },
   flicker:function(){
     var that = this;
@@ -58,11 +66,20 @@ Page({
   plays:function(){
     var video = wx.createVideoContext('myVideo');
     video.play();
+    this.setData({
+      'action' : 4
+    })
   },
   //视频停止按钮
   pauses:function(){
     var video = wx.createVideoContext('myVideo');
     video.pause();
+  },
+  //返回按钮
+  returnFun:function(){
+    this.setData({
+      'action': 3,
+    })
   },
   /**
    * 生命周期函数--监听页面加载
