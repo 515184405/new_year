@@ -1,11 +1,8 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/entry/entry",
-    "pages/personal/personal",
-    "pages/video/video",
-    "pages/user/user"
+    "pages/entry/entry", 
+    "pages/personal/personal", 
+    "pages/user/user" 
   ],
   "window": {
     "backgroundTextStyle": "light",
