@@ -22,17 +22,12 @@ page{
   margin-bottom:40rpx;
   font-size: 32rpx;
   border-radius:5px;
-  border:1px solid #ffde03;
-  box-shadow: 0px 0px 10px #ffde03; 
 }
-.btn-link1{
-  color:#ffde03;
-}
-.btn-link2{
-  background-color:#ffde03;
-  color:#ff2a08;
-  font-weight: bold;
-  font-family: '微软雅黑';
+.btn-link{
+  width:100px;
+  background: #058514;
+  color:#fff;
+  text-align: center
 }
 .other-navigator-hover{
   border-color:#fed100;

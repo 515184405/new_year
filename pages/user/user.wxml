@@ -3,15 +3,29 @@
      <image src='{{userInfo.avatarUrl}}' class='avatarUrl'></image> 
      <view class='nickName'>{{userInfo.nickName}}</view>
    </view>
+   <view class='_line'></view>
    <view class='user_module'>
    <view class='navBar '>
       <view class='navBar-box flex'>
+        <!-- 如果不是链接请改成按钮 -->
         <navigator data-cls='1' bindtap='toggleClass' class='{{active == 1 ? "active" : ""}} navBar-item'>我发出的</navigator>
         <navigator data-cls='2' bindtap='toggleClass' class='{{active == 2 ? "active" : ""}} navBar-item'>我收到的</navigator>
       </view>
    </view>
    <scroll-view scroll-with-animation="{{true}}" scroll-y="{{true}}" class='pay-module'>
-    
+      <view wx:for='{{10}}' class='flex module-item'>
+          <view>
+             <image src='{{userInfo.avatarUrl}}' class='item-img'></image>
+          </view>
+          <view>
+            <view class='item-ls'>{{userInfo.nickName}}</view>
+            <view class='item-bs'>来自：{{userInfo.city}}</view>
+          </view>
+          <view>
+            <view class='item-ls t-r'>视频</view>
+            <view class='item-bs t-r'>2018-02-02 18:02:02</view>
+          </view>
+      </view>
    </scroll-view>
    </view>
 </view>

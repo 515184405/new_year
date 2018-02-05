@@ -85,7 +85,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    //如果参数带play则把状态设置成action = 5;此状态为播放状态
+    if(!!options.play){
+
+      this.setData({
+        'action' : 5,
+      })
+    }
   },
 
   /**

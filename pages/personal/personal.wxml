@@ -1,6 +1,7 @@
 <view class='personal-box'>
   <view class='video-box flex'>
-       <camera wx:if='{{camera_show == 1}}' device-position="front" flash="off" binderror="error" style="width: 100%; height: 100%;"></camera>      
+    <image class='front_bg' src='../../image/front_bg.png'></image>
+        <camera wx:if='{{camera_show == 1}}' device-position="front" flash="off" binderror="error" style="width: 100%; height: 100%;"></camera>       
      <cover-view wx:if='{{is_flicker == 1}}' class='camera-rec'> ● REC </cover-view>
      <video style='height:100%;width:100%' autoplay controls='{{false}}' id='myVideo' wx:if='{{camera_show == 2}}' poster='{{video_img}}' src="{{video_url}}" ></video>
   </view>
@@ -12,16 +13,24 @@
         <button bindtap='plays' style='margin-left:30rpx;' class='btn btn-link1'>预览</button>        
         <button open-type="share" style='margin-left:30rpx;' class='btn btn-link1'>下一步</button>         
       </block>
-       <button wx:if='{{action == 4}}' bindtap='returnFun' class='btn btn-link1'>返回</button>     
+       <button wx:if='{{action == 4}}' bindtap='returnFun' class='btn btn-link1'>返回</button> 
+       <block wx:if='{{action == 5}}'>
+          <view><button class='btn btn-link1'>我也录制</button></view>
+          <view><navigator url='../user/user' open-type="redirect" class='btn btn-navigator btn-link1'>我的</navigator></view>
+       </block>      
   </view>
     <view class='text-module'>
+    <view class='text_bg flex'>
+        <image mode='aspectFit' src='../../image/text_bg.jpg'></image>
+    </view>
     <swiper class='text-swiper'                            
     autoplay="{{scroll_data.autoplay}}" interval="{{scroll_data.interval}}" duration="{{scroll_data.duration}}" circular="{{scroll_data.circular}}"  vertical="{{scroll_data.vertical}}">
-    <block wx:for="{{str}}">
-      <swiper-item class='flex'>
-         <navigator class='btn btn-link1' url="../user/user?id=1" hover-class="navigator-hover" open-type="redirect">{{item}}</navigator>
+      <swiper-item wx:for="{{5}}" class='swiper-item-text'>
+          <view>让快乐与你紧紧拥抱，让烦恼低头悄悄走掉，让健康吉祥对你格外关照，让幸福永远对你微笑！祝您新春快乐，鸡年旺旺！</view>
+          <view>爱您，谢谢您，还要声声不断祝福您，因为母亲能做到的一切您都做到了。祝您新年快乐。</view>
+          <view>爱您，谢谢您，还要声声不断祝福您，因为母
+亲能做到的一切您都做到了。祝您新年快乐。</view>
       </swiper-item>
-    </block>
   </swiper>
 </view>
 </view>

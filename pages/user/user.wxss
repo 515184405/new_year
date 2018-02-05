@@ -20,14 +20,17 @@
   margin-top:18rpx;
   color:#333;
 }
+._line{
+  height:2%;
+}
 .user_module{
   height:80%;
-  margin-top:2%;
   background: #fff;
 }
 .navBar{
-  height:5%;
-  padding:20rpx 5%;
+  height:8%;
+  padding-top:10rpx;
+  box-sizing: border-box;
 }
 .navBar-box{
   width:100%;
@@ -35,7 +38,8 @@
   border-radius: 3px;
 }
 .navBar-box .active{
-  background-color:yellowgreen;
+  background-color:#619bfe;
+  color:#fff;
 }
 .navBar-item{
   width:50%;
@@ -47,8 +51,9 @@
   border-left:1px solid #aaa;
 }
 .pay-module{
-  width:100%;
-  height:75%;
+  width:90%;
+  margin:0 auto;
+  height:92%;
   background: #fff;
   box-sizing: border-box;
 }
@@ -65,8 +70,25 @@
   justify-content: space-between;
   border-bottom:20rpx solid #eee;
 }
-.btn-status{
-  margin:0;
-  color:#575757;
+.module-item{
+  justify-content: space-between;
+  padding:10rpx 0;
+  border-bottom:1px solid #eee;
+}
+.item-img{
+  height:80rpx;
+  width:80rpx;
+  padding-top:10rpx;
+  border-radius: 10rpx;
+}
+.item-ls{
+  width:280rpx;
   font-size: 32rpx;
+}
+.item-bs{
+  font-size:24rpx;
+  color:#888;
+}
+.t-r{
+  text-align: right;
 }

@@ -1,5 +1,4 @@
 <view class='container btn-box'>
-    <navigator class='btn btn-link1' url="../personal/personal?id=1" hover-class="navigator-hover" open-type="redirect">个人制作</navigator>
-  <navigator class='btn btn-link2' url="../personal/personal?id=2" open-type="redirect" hover-class="other-navigator-hover">企业制作</navigator>
+  <navigator class='btn btn-link' url="../personal/personal?id=2" open-type="redirect" hover-class="other-navigator-hover">开始制作</navigator>
 </view>
-<image mode='widthFix' style='width:100%;' src='../../image/bg.jpg' ></image>
+<image style='width:100%;height:100%;' src='../../image/entry_bg.jpg' ></image>
