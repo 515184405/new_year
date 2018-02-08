@@ -9,12 +9,11 @@
   position:absolute;
   left:0;
   top:0;
-  z-index: 999;
 }
 .camera-rec{
   position: absolute;
-  left:10rpx;
-  top:10rpx;
+  left:100rpx;
+  top:50rpx;
   color:#f00;
 }
 .personal-box{
@@ -35,8 +34,26 @@
   justify-content: center;
   align-items: center;
 }
-.btn-link1{
+.btn{
+  display: block;
+  height:50rpx;
+  line-height: 50rpx;
+  width:180rpx;
+  color:#fff;
+  margin-bottom:40rpx;
+  font-size: 32rpx;
   background-color: #058514;
+  text-align: center;
+  margin-left:40rpx;
+  border-radius: 3px;
+  position: relative;
+  z-index: 999;
+}
+.local-btn{
+  position: absolute;
+  left:50%;
+  bottom:30rpx;
+  margin-left:-90rpx;
 }
 .text_bg image{
   height:95%;
@@ -48,9 +65,11 @@
   box-sizing: border-box;
 }
 .btn-module{
-  position: relative;
+  position: absolute;
   z-index:999;
-  margin-top:-110rpx;
+  bottom:50rpx;
+  left:0;
+  width:100%;
 }
 .btn-module button{
   line-height: 1;

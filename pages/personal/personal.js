@@ -13,8 +13,8 @@ Page({
     str: ['就告诉老公那边', '送二更不能换地方公司', '代理发布到两点半那地', '方了办公机构的副本呢'],
     scroll_data: { //文字滚动设置
       autoplay: true,
-      interval: 3000,
-      duration: 1000,
+      interval: 0,
+      duration: 5000,
       vertical: true,
       circular: true,
     }
@@ -26,6 +26,11 @@ Page({
         'is_flicker': !that.data.is_flicker
       })
     },1000)
+  },
+  navUser:function(){
+    wx.navigateTo({
+      url: '/pages/user/user',
+    })
   },
   //录制视频方法
   startRecord:function(){
@@ -90,6 +95,7 @@ Page({
 
       this.setData({
         'action' : 5,
+        'camera_show' : 2,
       })
     }
   },

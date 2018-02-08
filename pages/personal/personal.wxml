@@ -1,23 +1,36 @@
 <view class='personal-box'>
   <view class='video-box flex'>
-    <image class='front_bg' src='../../image/front_bg.png'></image>
-        <camera wx:if='{{camera_show == 1}}' device-position="front" flash="off" binderror="error" style="width: 100%; height: 100%;"></camera>       
-     <cover-view wx:if='{{is_flicker == 1}}' class='camera-rec'> ● REC </cover-view>
-     <video style='height:100%;width:100%' autoplay controls='{{false}}' id='myVideo' wx:if='{{camera_show == 2}}' poster='{{video_img}}' src="{{video_url}}" ></video>
-  </view>
-  <view class='btn-module flex'>
-      <button wx:if='{{action == 1}}' bindtap='startRecord' class='btn btn-link1'>开始录制</button> 
-      <button wx:if='{{action == 2}}' bindtap='stopRecord' class='btn btn-link1'>结束录制</button> 
-      <block wx:if='{{action == 3}}'>
-        <button bindtap='startRecord' class='btn btn-link1'>重新录制</button> 
-        <button bindtap='plays' style='margin-left:30rpx;' class='btn btn-link1'>预览</button>        
-        <button open-type="share" style='margin-left:30rpx;' class='btn btn-link1'>下一步</button>         
-      </block>
-       <button wx:if='{{action == 4}}' bindtap='returnFun' class='btn btn-link1'>返回</button> 
-       <block wx:if='{{action == 5}}'>
-          <view><button class='btn btn-link1'>我也录制</button></view>
-          <view><navigator url='../user/user' open-type="redirect" class='btn btn-navigator btn-link1'>我的</navigator></view>
-       </block>      
+      <!-- 录视频 -->
+      <camera wx:if='{{camera_show == 1}}' device-position="front" flash="auto" binderror="error" style="width: 100%; height: 100%;"> 
+            <cover-view class='front_bg'>
+                <cover-image src='../../image/front_bg.png'></cover-image>
+            </cover-view>
+            <cover-view wx:if='{{is_flicker}}' class='camera-rec'> ● REC </cover-view>            
+            <cover-view class='btn-module flex'>
+              <cover-view wx:if='{{action == 1}}' bindtap='startRecord' class='btn'>开始录制</cover-view> 
+              <cover-view wx:if='{{action == 2}}' bindtap='stopRecord' class='btn'>结束录制</cover-view> 
+            </cover-view>
+      </camera> 
+      <!-- 录视频 -->
+      <!-- 播放视频       -->
+     <video style='height:100%;width:100%' autoplay controls='{{false}}' id='myVideo' wx:if='{{camera_show == 2}}' poster='{{video_img}}' src="{{video_url}}" >
+          <cover-view class='front_bg'>
+            <cover-image src='../../image/front_bg.png'></cover-image>
+          </cover-view>
+          <cover-view class='btn-module flex'>
+            <block wx:if='{{action == 3}}'>
+              <cover-view bindtap='startRecord' class='btn btn3'>重新录制</cover-view> 
+              <cover-view bindtap='plays' style='margin-left:30rpx;' class='btn btn3'>预览</cover-view>        
+              <cover-view open-type="share" style='margin-left:30rpx;' class='btn btn3'>下一步</cover-view>       
+            </block>
+            <cover-view wx:if='{{action == 4}}' bindtap='returnFun' class='btn'>返回</cover-view> 
+            <block wx:if='{{action == 5}}'>
+              <cover-view bindtap='startRecord' class='btn'>我也录制</cover-view>
+              <cover-view bindtap='navUser' class='btn'>我的</cover-view>
+            </block>      
+          </cover-view>
+     </video>
+      <!-- 播放视频       -->
   </view>
     <view class='text-module'>
     <view class='text_bg flex'>

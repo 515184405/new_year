@@ -16,13 +16,6 @@ page{
   top:0;
   width:100%;
 }
-.btn{
-  padding:18rpx 46rpx;
-  color:#fff;
-  margin-bottom:40rpx;
-  font-size: 32rpx;
-  border-radius:5px;
-}
 .btn-link{
   width:100px;
   background: #058514;
